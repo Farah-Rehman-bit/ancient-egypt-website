@@ -1,0 +1,710 @@
+/* =========================================
+   1. RESET & BODY
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0906;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   2. INTRO SCREEN
+========================================= */
+
+#intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(91, 63, 25, 0.25),
+            rgba(5, 4, 2, 0.95)
+        ),
+        url("images/egypt-door-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   3. DOORS
+========================================= */
+
+.door {
+    position: absolute;
+    top: 0;
+
+    width: 50%;
+    height: 100%;
+    z-index: 5;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.3),
+            transparent,
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("images/ancient-stone.jpg");
+
+    background-size: 200% 100%;
+
+    border: 4px solid #8d672b;
+
+    transition:
+        transform 2.2s cubic-bezier(.77, 0, .18, 1);
+
+    box-shadow:
+        inset 0 0 80px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+
+/* LEFT DOOR */
+
+.door-left {
+    left: 0;
+    background-position: left center;
+    border-right: 2px solid #c59b45;
+}
+
+
+/* RIGHT DOOR */
+
+.door-right {
+    right: 0;
+    background-position: right center;
+    border-left: 2px solid #c59b45;
+}
+
+
+/* =========================================
+   4. DOOR DECORATION
+========================================= */
+
+.door-decoration {
+    position: absolute;
+    top: 42%;
+
+    font-size: 75px;
+    color: #d4af37;
+    opacity: 0.75;
+
+    text-shadow:
+        0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.door-left .door-decoration {
+    right: 25%;
+}
+
+.door-right .door-decoration {
+    left: 25%;
+}
+
+
+/* HIEROGLYPHS */
+
+.hieroglyphs {
+    position: absolute;
+    top: 25%;
+
+    font-size: 30px;
+    line-height: 2.5;
+
+    color: #b88a35;
+    opacity: 0.55;
+}
+
+.door-left .hieroglyphs {
+    right: 8%;
+}
+
+.door-right .hieroglyphs {
+    left: 8%;
+}
+
+
+/* =========================================
+   5. DOOR OPEN ANIMATION
+========================================= */
+
+.doors-open .door-left {
+    transform: translateX(-100%);
+}
+
+.doors-open .door-right {
+    transform: translateX(100%);
+}
+
+
+/* =========================================
+   6. INTRO CONTENT
+========================================= */
+
+.intro-content {
+    position: absolute;
+    z-index: 10;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 650px;
+    max-width: 85%;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: rgba(12, 9, 5, 0.55);
+
+    border: 1px solid rgba(212, 175, 55, 0.35);
+
+    backdrop-filter: blur(3px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+/* HIDE INTRO WHEN DOORS OPEN */
+
+.doors-open .intro-content {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.1);
+}
+
+
+/* =========================================
+   7. EYE OF HORUS
+========================================= */
+
+.eye {
+    font-size: 75px;
+    color: #d4af37;
+
+    margin-bottom: 15px;
+
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+
+    from {
+        text-shadow:
+            0 0 5px rgba(212, 175, 55, 0.3);
+    }
+
+    to {
+        text-shadow:
+            0 0 30px rgba(212, 175, 55, 0.9);
+    }
+}
+
+
+/* =========================================
+   8. INTRO TEXT
+========================================= */
+
+.small-title {
+    color: #d4af37;
+
+    font-size: 12px;
+    letter-spacing: 6px;
+
+    margin-bottom: 15px;
+}
+
+.intro-content h1 {
+    font-family: 'Cinzel', serif;
+
+    font-size: 42px;
+    letter-spacing: 4px;
+
+    color: #eee4ca;
+
+    line-height: 1.2;
+}
+
+.intro-content h1 span {
+    display: block;
+
+    color: #d4af37;
+
+    margin-top: 5px;
+}
+
+
+/* GOLD LINE */
+
+.line {
+    width: 120px;
+    height: 2px;
+
+    background: #d4af37;
+
+    margin: 25px auto;
+}
+
+
+/* INTRO DESCRIPTION */
+
+.intro-text {
+    max-width: 520px;
+
+    margin: auto;
+
+    color: #c9c0ae;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   9. ENTER BUTTON
+========================================= */
+
+#enterBtn {
+    margin-top: 30px;
+
+    padding: 16px 30px;
+
+    background: transparent;
+
+    border: 1px solid #d4af37;
+
+    color: #d4af37;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+#enterBtn span {
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+#enterBtn:hover {
+    background: #d4af37;
+
+    color: #0b0906;
+
+    box-shadow:
+        0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+
+/* =========================================
+   10. MAIN WEBSITE
+========================================= */
+
+#website {
+    opacity: 0;
+
+    transition: opacity 1.5s ease;
+}
+
+#website.website-visible {
+    opacity: 1;
+}
+
+
+/* =========================================
+   11. HEADER
+========================================= */
+
+header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 85px;
+
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: rgba(8, 6, 3, 0.85);
+
+    border-bottom: 1px solid #7a5c2e;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.logo-eye {
+    font-size: 42px;
+    color: #d4af37;
+}
+
+.logo h2 {
+    font-family: 'Cinzel', serif;
+
+    font-size: 17px;
+    letter-spacing: 2px;
+
+    color: #e5d3a5;
+}
+
+.logo small {
+    color: #8e8066;
+
+    letter-spacing: 2px;
+    font-size: 8px;
+}
+
+/* nav */
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border: 1px solid #d4af37;
+
+    color: #d4af37;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #d4af37;
+
+    color: #0b0906;
+}
+
+
+/* =========================================
+   12. HERO SECTION
+========================================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: calc(100vh - 85px);
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================
+   13. BACKGROUND VIDEO
+========================================= */
+
+.background-video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   14. VIDEO OVERLAY
+========================================= */
+
+.overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   15. HERO CONTENT
+========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 600px;
+
+    margin-left: 10%;
+}
+
+
+/* SUBTITLE */
+
+.subtitle {
+    color: #d4af37;
+
+    font-size: 14px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+/* HERO HEADING */
+
+.hero-content h1 {
+    margin: 0;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 82px;
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+}
+
+.hero-content h1 span {
+    display: block;
+
+    color: #d4af37;
+}
+
+
+/* GOLD LINE */
+
+.gold-line {
+    width: 145px;
+    height: 3px;
+
+    background: #d4af37;
+
+    margin: 38px 0 32px;
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+    max-width: 580px;
+
+    color: #eeeeee;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   16. EXPLORE BUTTON
+========================================= */
+
+.explore-btn {
+    padding: 18px 35px;
+
+    background: transparent;
+
+    border: 1px solid white;
+
+    color: #d4af37;
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.explore-btn:hover {
+    background: #d4af37;
+
+    color: black;
+
+    border-color: #d4af37;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   17. RESPONSIVE DESIGN
+========================================= */
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .intro-content h1 {
+        font-size: 30px;
+    }
+
+    .hero {
+        height: auto;
+
+        min-height: 650px;
+
+        padding: 130px 8% 50px;
+    }
+
+    .hero-content {
+        width: auto;
+
+        margin-left: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .intro-content {
+        padding: 25px 15px;
+    }
+
+    .eye {
+        font-size: 50px;
+    }
+
+    .intro-content h1 {
+        font-size: 24px;
+
+        letter-spacing: 2px;
+    }
+
+    .intro-text {
+        font-size: 12px;
+    }
+
+    .door-decoration {
+        font-size: 45px;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 120px 6% 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+
+        letter-spacing: 5px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .explore-btn {
+        padding: 14px 25px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   18. IMAGE FIT
+========================================= */
+
+.img-fit {
+    width: 100%;
+    height: 100%;
+}
