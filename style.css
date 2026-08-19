@@ -777,6 +777,40 @@ nav a:hover {
     height: 100%;
 }
 
+/* =========================================
+   ADDED: KEEP DOOR SYMBOLS ABOVE IMAGES
+   ========================================= */
+
+.door {
+    overflow: hidden;
+}
+
+.door img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: 1;
+}
+
+.door::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.12);
+    z-index: 2;
+}
+
+.door-decoration,
+.hieroglyphs {
+    z-index: 5;
+}
+
+
 .discover {
     padding: 70px 0;
     background: #0d0b08;
@@ -856,6 +890,9 @@ nav a:hover {
     color: var(--gold);
 
     font-size: 20px;
+}
+.card-icon:hover{
+    background-color: #69521f;
 }
 
 .card-body {
@@ -967,6 +1004,13 @@ nav a:hover {
     font-size: 10px;
 }
 
+.stat:hover{
+        border-bottom:1px solid #d4af37 ;  
+}
+
+.fa-color:hover{
+    color: black;
+}
 
 /* ================= FOOTER ================= */
 
@@ -1123,4 +1167,52 @@ footer .col-lg-2 a:hover {
 .footer-bottom p {
     font-size: 9px;
     margin: 0;
+}
+
+    /* CARDS */
+
+ .card{
+    padding: 0;
+
+    border: 1px solid #c59b45;
+    border-radius: 5px;
+    background-color: #f5e7c4 ;
+}
+
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(20,15,8,0.18);
+}  
+
+.card span{
+    font-family:monospace;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+
+    color: #c59b45;
+}
+
+.card-text{
+    font-family: georgia;
+    font-size: 14px ;
+
+    color: #7a5c2e;
+    margin-bottom: 20px;
+}
+.card-title{
+  font-family: 'Cinzel',serif;
+  font-weight: 550;
+
+  margin: 10px 0px;
+}
+
+.card button{
+    font-size: 15px;
+    padding: 5px 15px;
+
+    border: 1px solid #22166b;
+    
+    color: #22166b;
+    background-color: #f5e7c4;
 }
