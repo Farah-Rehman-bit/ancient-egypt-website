@@ -321,7 +321,7 @@ body {
 
 
 /* =========================================
-   10. MAIN WEBSITE, MAIN-PYRAMID
+   10. MAIN WEBSITE, MAIN-PYRAMID, MAIN PHARAOHS
 ========================================= */
 
 #website {
@@ -334,8 +334,8 @@ body {
     opacity: 1;
 }
 
-.main-pyramid{
-    background-color: #f5e7c4;
+.main-pyramid, .main-pharaohs{
+    background-color: #fef1d1;
 }
 
 /* =========================================
@@ -526,7 +526,7 @@ nav a:hover {
 
     color: rgb(253, 241, 221);
 
-    font-family: Georgia, serif;
+    font-family: 'Chizel', serif;
 
     font-size: 82px;
 
@@ -733,7 +733,7 @@ nav a:hover {
 
 
 /* =========================================
-   18. PYRAMID SECTION
+   19. PYRAMID SECTION
 ========================================= */
 
     /* CARDS */
@@ -743,7 +743,7 @@ nav a:hover {
 
     border: 1px solid #c59b45;
     border-radius: 5px;
-    background-color: #f5e7c4 ;
+    background-color: #fef1d1 ;
 }
 
 .card:hover{
@@ -781,5 +781,84 @@ nav a:hover {
     border: 1px solid #22166b;
     
     color: #22166b;
-    background-color: #f5e7c4;
+    background-color: #fef1d1;
+}
+.card button:hover{
+    background: #dfb97f;
+    color: #ffffff;
+}
+
+/* =========================================
+   20. PHARAOHS SECTION
+========================================= */
+
+   /* PHARAOHS DEATILS */
+
+.pharaohs-section{
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px;
+
+    justify-content: center;
+    align-items:center;
+}
+
+.pharaohs-section .container{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pharaohs-name{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Cinzel';
+
+    padding: 10px 20px;
+
+    border: 3px solid #b88a35;
+    border-radius: 30px;
+
+    color: #32220a;
+}  
+
+   /* PHARAOHS CARD */
+
+.pharaoh-card{
+    width: 100%;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: row;
+
+    overflow: hidden;
+}
+.pharaoh-img img{
+    width: 100%;
+}
+.pharaoh-card:hover{
+    transform: translateY(-6px); 
+}
+    /* PHARAOHS CONTENTS */
+.pharaoh-content{
+    padding: 30px 20px;
+
+    color: #1e1303;
+}
+
+.pharaoh-content h3{
+    font-family: 'Cinzel' ;
+    font-weight: 550;
+}
+
+.stat-row{
+  display:flex; 
+  justify-content:space-between;
+
+  font-family: var(--font-mono); 
+  font-size:.85rem;
+
+  padding: .4rem 0; 
+  border-bottom: 1px dashed rgba(36,26,15,0.2);
 }
