@@ -816,6 +816,11 @@ nav a:hover {
   box-shadow: 0 18px 34px rgba(20,15,8,0.18);
 }  
 
+.card-body1{
+    text-align: left;
+    padding: 20px 10px;
+}
+
 .card span{
     font-family:monospace;
     font-size: 14px;
@@ -996,7 +1001,7 @@ nav a:hover {
   justify-content:space-between;
 
   color: #6c5431;
-  font-size:.85rem;
+  font-size:15px;
 
   padding: .4rem 0; 
   border-bottom: 1px dashed rgba(44, 25, 5, 0.2);
@@ -1173,17 +1178,17 @@ nav a:hover {
     margin-top: 35px;
 }
 
-.stat {
+.stat1 {
     text-align: center;
     border-right: 1px solid var(--border);
 }
 
-.stat:last-child {
+.stat1:last-child {
     border: none;
 }
 
-.stat i,
-.stat span {
+.stat1 i,
+.stat1 span {
     color: var(--gold);
     font-size: 23px;
 }
@@ -1192,20 +1197,20 @@ nav a:hover {
     background-color: #69521f;
 }
 
-.stat h3 {
+.stat1 h3 {
     color: var(--gold);
     font-family: "Cinzel", serif;
     font-size: 23px;
     margin: 8px 0;
 }
 
-.stat p {
+.stat1 p {
     color: #aaa18f;
     font-size: 10px;
 }
 
 /* stat hover */
-.stat:hover{
+.stat1:hover{
         border-bottom:1px solid #d4af37 ;  
 }
 
