@@ -592,15 +592,33 @@ nav a:hover {
 
 /* GOLD LINE */
 
+
+
 .gold-line {
-    width: 145px;
-    height: 3px;
-
-    background: #d4af37;
-
-    margin: 38px 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px auto;
+    width: 280px;
+   
 }
 
+.gold-line span {
+    width: 100px;
+    height: 2px;
+    background: #d4af37;
+}
+
+.fa-symbol{
+    color:#d4af37 ;
+}
+.gold-line .fa-symbol {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    
+}
 
 /* DESCRIPTION */
 
@@ -1035,6 +1053,7 @@ nav a:hover {
     font-family: "Cinzel", serif;
     letter-spacing: 4px;
     font-size: 11px;
+    color:#d4af37 ;
 }
 
 .why-content h2 {
@@ -1157,6 +1176,8 @@ footer {
     display: flex;
     gap: 10px;
     margin-top: 18px;
+    color: #d4af37;
+    
 }
 
 .socials a {
@@ -1171,13 +1192,13 @@ footer {
     border-radius: 50%;
 
     color: var(--gold);
-
+     text-decoration: none;
     transition: .3s;
 }
 
 .socials a:hover {
     background: var(--gold);
-    color: #111;
+    color:  #705723;
 }
 
 
