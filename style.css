@@ -380,6 +380,8 @@ body {
 
 .main-pyramid, .main-pharaohs{
     background-color: #fef1d1;
+
+    padding-bottom: 50px;
 }
 
 /* =========================================
@@ -833,6 +835,42 @@ nav a:hover {
     color: #ffffff;
 }
 
+/* ---------- MODAL ---------- */
+
+
+.modal-egypt .modal-content{
+    background: #EFE4C6;
+    border: 2px solid #B8863B;
+    border-radius: 4px;
+}
+.modal-egypt .modal-header{ 
+    border-bottom: 1px solid rgba(184,134,59,0.35); 
+}
+
+.modal-egypt .modal-title{ 
+    font-family: 'Cinzel'; 
+}
+
+.modal-egypt .modal-footer{ 
+    border-top: 1px solid rgba(184,134,59,0.35); 
+}
+
+.modal-egypt .stat-row{
+  display:flex; 
+  justify-content:space-between;
+
+  font-family: 'Space Mono'; 
+  font-size:.85rem;
+
+  padding: .4rem 0; 
+  border-bottom: 1px dashed rgba(36,26,15,0.2);
+}
+
+.modal-egypt .stat-row span:first-child{ 
+    color:#6b5a40; 
+    text-transform:uppercase; 
+    letter-spacing:.08em; }
+
 /* =========================================
    20. PHARAOHS SECTION
 ========================================= */
@@ -861,6 +899,7 @@ nav a:hover {
     font-family: 'Cinzel';
 
     padding: 10px 20px;
+    margin: 50px 0px;
 
     border: 3px solid #b88a35;
     border-radius: 30px;
@@ -872,6 +911,8 @@ nav a:hover {
 
 .pharaoh-card{
     width: 100%;
+    height: 500px;
+
     margin-bottom: 50px;
 
     display: flex;
@@ -879,15 +920,46 @@ nav a:hover {
 
     overflow: hidden;
 }
+
+.pharaoh-img{
+    height: 500px;
+    object-fit: cover;
+}
 .pharaoh-img img{
     width: 100%;
+    border-radius: 5px;
 }
 .pharaoh-card:hover{
     transform: translateY(-6px); 
 }
+
+    /* PHARAOHS LINES */
+
+.line1 {
+    width: 40%;
+    height: 2px;
+
+    background: #d4af37;
+
+    margin-bottom: 50px;
+}    
+
+.line2 {
+    width: 100%;
+    height: 1px;
+
+    background: #dbc683;
+
+    margin-bottom: 50px;
+} 
+
     /* PHARAOHS CONTENTS */
 .pharaoh-content{
     padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     color: #1e1303;
 }
@@ -897,13 +969,21 @@ nav a:hover {
     font-weight: 550;
 }
 
+.pharaoh-content .stat{
+    align-self: baseline;
+}
+
 .stat-row{
   display:flex; 
   justify-content:space-between;
 
-  font-family: var(--font-mono); 
+  color: #6c5431;
   font-size:.85rem;
 
   padding: .4rem 0; 
-  border-bottom: 1px dashed rgba(36,26,15,0.2);
+  border-bottom: 1px dashed rgba(44, 25, 5, 0.2);
+}
+
+.stat{
+    width: 100%;
 }
