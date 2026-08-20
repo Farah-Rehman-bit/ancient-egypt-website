@@ -999,14 +999,12 @@ nav a:hover {
   font-size:.85rem;
 
   padding: .4rem 0; 
-<<<<<<< HEAD
   border-bottom: 1px dashed rgba(44, 25, 5, 0.2);
 }
 
 .stat{
     width: 100%;
-}
-=======
+
   border-bottom: 1px dashed rgba(36,26,15,0.2);
 }
 
@@ -1373,4 +1371,3 @@ footer .col-lg-2 a:hover {
     margin: 0;
 }
 
->>>>>>> 58b03d8152f8c3c6c7c31eedbb268f083cc957d2
