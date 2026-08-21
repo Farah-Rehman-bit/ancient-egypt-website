@@ -1,0 +1,338 @@
+#website {
+            width: 100%;
+        }
+
+        .main-mysteries {
+            background-color: #fef1d1;
+            padding-bottom: 50px;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 85px;
+            z-index: 20;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5%;
+
+            background: rgba(8, 6, 3, 0.85);
+            border-bottom: 1px solid #7a5c2e;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-eye img {
+            width: 70px;
+            height: auto;
+        }
+
+        .logo h2 {
+            font-family: "Cinzel", serif;
+            font-size: 17px;
+            letter-spacing: 2px;
+            margin: 0 0 2px;
+            color: #e5d3a5;
+        }
+
+        .logo small {
+            color: #8e8066;
+            letter-spacing: 2px;
+            font-size: 8px;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: "Cinzel", serif;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+            border-bottom: 1px solid #d4af37;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 85px);
+            min-height: 600px;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+
+            margin-bottom: 0;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            width: 650px;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+
+        .subtitle {
+            display: block;
+
+            color: #d4af37;
+            font-size: 14px;
+            letter-spacing: 8px;
+
+            margin-bottom: 25px;
+        }
+
+       .hero-content h1 {
+            margin: 0;
+
+            color: rgb(253, 241, 221);
+
+            font-family: 'Chizel', serif;
+
+            font-size: 82px;
+
+           font-weight: 400;
+    
+           line-height: 0.95;
+
+           letter-spacing: 2px;
+}
+
+         .hero-content h1 span {
+              display: block;
+
+             color: #d4af37;
+}
+
+        .description {
+            max-width: 550px;
+
+            color: #e8d8b0;
+            font-family: "Poppins", sans-serif;
+
+            font-size: 15px;
+            line-height: 1.8;
+
+            margin-top: 25px;
+        }
+
+        .construction-theories {
+            padding: 90px 6%;
+            background: #eee3c4;
+        }
+
+        .construction-theories > span {
+            display: block;
+
+            color: #b08036;
+            font-size: 12px;
+            letter-spacing: 6px;
+
+            margin-bottom: 15px;
+        }
+
+        .construction-theories > h2 {
+            font-family: "Cinzel", serif;
+            font-size: 48px;
+            font-weight: 500;
+
+            color: #2b2118;
+
+            margin-bottom: 60px;
+        }
+
+        .theories-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .theory-card {
+            background: #eee3c4;
+            border: 1px solid #d5bd86;
+            overflow: hidden;
+        }
+
+        .theory-image {
+            width: 100%;
+            height: 255px;
+
+            background: #182d32;
+            overflow: hidden;
+        }
+
+        .theory-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            display: block;
+        }
+
+        .theory-content {
+            padding: 30px;
+        }
+
+        .theory-content span {
+            display: block;
+
+            color: #b08036;
+            font-size: 11px;
+            letter-spacing: 5px;
+
+            margin-bottom: 12px;
+        }
+
+        .theory-content h3 {
+            font-family: "Cinzel", serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 1.3;
+
+            color: #2b2118;
+
+            margin-bottom: 18px;
+        }
+
+        .theory-content p {
+            font-family: "Poppins", sans-serif;
+
+            font-size: 14px;
+            line-height: 1.9;
+
+            color: #493b2c;
+        }
+
+        .open-questions {
+            padding: 90px 6%;
+            background: #eee3c4;
+        }
+
+        .open-questions  span {
+            display: block;
+
+            color: #b08036;
+            font-size: 12px;
+            letter-spacing: 6px;
+
+            margin-bottom: 15px;
+        }
+
+        .open-questions  h2 {
+            font-family: "Cinzel", serif;
+            font-size: 48px;
+            font-weight: 500;
+
+            color: #2b2118;
+
+            margin-bottom: 60px;
+        }
+
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .questions-container details {
+            border: 1px solid #d2b978;
+            background: #eee3c4;
+        }
+
+        .questions-container summary {
+            list-style: none;
+
+            cursor: pointer;
+
+            padding: 25px 60px 25px 28px;
+
+            font-family: "Cinzel", serif;
+            font-size: 21px;
+
+            color: #211a13;
+
+            position: relative;
+        }
+
+        .questions-container summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .questions-container summary::after {
+            content: "v";
+
+            position: absolute;
+
+            right: 28px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            font-size: 25px;
+        }
+
+        .questions-container details[open] summary {
+            background: #171717;
+            color: #c59643;
+        }
+
+        .questions-container details[open] summary::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .questions-container details p {
+            margin: 0;
+
+            padding: 25px 28px 30px;
+
+            background: #eee3c4;
+
+            color: #3e3226;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 15px;
+            line-height: 1.9;
+        }
