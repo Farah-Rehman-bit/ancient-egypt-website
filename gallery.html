@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramids</title>
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sections */
+       .gallery,
+       .pyramid-section,
+       .sphinx-section,
+       .Hieroglyphics-section,
+       .artifacts-section {
+            padding: 50px 80px;
+        }
+
+
+    /* Section Heading */
+      .gallery h2,
+      .pyramid-section h2,
+      .sphinx-section h2,
+      .hieroglyphics-section h2,
+      .artifacts-section h2 {
+         color: #c49a45;
+         font-size: 45px;
+         text-align: left;
+         margin-left: 90px;
+          margin-bottom: 30px;
+        }   
+
+
+/* Cards */    
+      .cards-grid {
+           display: grid;
+           grid-template-columns: repeat(4, 20rem);
+           gap: 25px;
+           justify-content: center;
+        }
+
+
+/* Card */
+    
+      .cards-grid .card {
+           width: 20rem;
+           background: #2b2118;
+           border: 1px solid #a9823c;
+           border-radius: 10px;
+          overflow: hidden;
+          transition: 0.3s;
+        }
+
+
+        /* Card Hover */
+          .cards-grid .card:hover {
+              transform: translateY(-8px);
+            }
+
+
+/* Image */
+          .cards-grid .card-img-top {
+               width: 100%;
+               height: 220px;
+               object-fit: cover;
+            }
+
+
+/* Card Body */
+           .cards-grid .card-body {
+                 padding: 20px;
+            }     
+
+            .cards-grid .card-body span {
+                 color: #b99a62;
+                  font-size: 12px;
+                }
+
+            .cards-grid .card-title {
+                color: #d6ad55;
+            }
+
+           .cards-grid .card-text {
+                 color: #ddd0b8;
+                 line-height: 1.5;
+            } 
+
+
+/* Button */
+            .cards-grid button {
+                  background: transparent;
+                  color: #c49a45;
+                  border: 1px solid #c49a45;
+                 padding: 8px 15px;
+                }
+    </style>
+</head>
+<body>
+    <header>
+
+            <div class="logo">
+
+                <div class="logo-eye">
+                    <img src="logo.svg" alt="">
+                </div>
+
+                <div>
+                    <h2>ANCIENT EGYPT</h2>
+                    <small>
+                        LEGACY • HISTORY • MYSTERY
+                    </small>
+                </div>
+
+            </div>
+
+
+            <nav>
+
+                <a href="index.html">Home</a>
+                <a href="pyramids.html">Pyramids</a>
+                <a href="pharaohs.html">Pharaohs</a>
+                <a href="mysteries.html">Mysteries</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="about.html">About</a>
+
+            </nav>
+
+    </header>
+
+    <main class="main-pyramid">
+
+        <section class="hero">
+            <img src="pyramids-hero.png" alt="" class="background-image">
+
+            <div class="overlay"></div>
+
+            <div class="hero-content">
+                <span class="subtitle">SIX STRUCTURE, SIX CENTURIES</span>
+
+                <h1>THE GALLERY OF ANCIENT EGYPT</h1>
+
+                <p class="description">From Djoser’s pioneering steps to the smooth, star-aligned faces of Giza the evolution of the pyramid form, revealed through six extraordinary monuments.</p>
+            </div>
+        </section>
+
+      <section class="gallery">
+
+               <h2>The Gallery</h2>
+
+                <div class="cards-grid">
+
+    
+                    <div class="g-col-4 card" style="width: 20rem;">
+                           <img src="pyramids-imgs/bent-pyramid.jpg" class="card-img-top" alt="Ancient Egyptian Pyramids">
+
+                            <div class="card-body">
+                                <span>ANCIENT EGYPT • C. 2600 BCE</span>
+                                <h5 class="card-title">PYRAMIDS</h5>
+
+                                <p class="card-text">
+                                 The pyramids were monumental tombs built for ancient Egyptian pharaohs.
+                                  They represent the incredible engineering, mathematics, and craftsmanship
+                                  of ancient Egypt.
+                                  </p>
+
+                               <button>Open details</button>
+                            </div>
+                     </div>
+
+
+    
+                    <div class="g-col-4 card" style="width: 20rem;">
+                          <img src="https://i.pinimg.com/736x/69/f0/f8/69f0f80eb6110b5d579cf1b7aaee28c1.jpg" class="card-img-top" alt="Great Sphinx of Giza">
+
+                        <div class="card-body">
+                           <span>GIZA • C. 2500 BCE</span>
+                           <h5 class="card-title">THE SPHINX</h5>
+
+                            <p class="card-text">
+                               The Great Sphinx of Giza is a massive limestone statue with the body
+                               of a lion and the head of a human. It is one of the most famous
+                               monuments of ancient Egypt.
+                            </p>
+
+                            <button>Open details</button>
+                        </div>
+                    </div>
+
+
+                    <div class="g-col-4 card" style="width: 20rem;">
+                          <img src="https://i.pinimg.com/1200x/47/82/67/478267987cd1cfff434f5633095d75a1.jpg" class="card-img-top" alt="Ancient Egyptian Hieroglyphics">
+
+                      <div class="card-body">
+                         <span>ANCIENT EGYPT • C. 3200 BCE</span>
+                         <h5 class="card-title">HIEROGLYPHICS</h5>
+
+                           <p class="card-text">
+                             Hieroglyphics were the writing system of ancient Egyptians.
+                             They used pictures and symbols to record religious beliefs,
+                              historical events, names, and everyday life.
+                           </p>
+
+                         <button>Open details</button>
+                        </div>
+                    </div>
+
+
+
+        
+                    <div class="g-col-4 card" style="width: 20rem;">
+                         <img src="https://i.pinimg.com/736x/5a/ef/b7/5aefb7746c26d880d133938817d59918.jpg" class="card-img-top" alt="Ancient Egyptian Artifacts">
+
+                      <div class="card-body">
+                           <span>ANCIENT EGYPT • 3000–30 BCE</span>
+                           <h5 class="card-title">ANCIENT ARTIFACTS</h5>
+
+                           <p class="card-text">
+                             Ancient Egyptian artifacts reveal how people lived, worshipped,
+                              worked, and were buried. Statues, jewelry, pottery, masks, and
+                              tools provide clues about their fascinating civilization.
+                            </p>
+ 
+                          <button>Open details</button>
+                       </div>
+                    </div>
+
+                </div>
+
+        </section>
+
+
+        <!-------pyramids-------->
+        <section class="pyramid-section">
+
+            <h2>The Pyramids</h2>
+
+            <div class="cards-grid">
+
+               <div class="g-col-4 card" style="width: 20rem;">
+                        <img src="pyramids-imgs/bent-pyramid.jpg" class="card-img-top" alt="">
+
+                        <div class="card-body">
+                          <span>DAHSHUR • C. 2600 BCE</span>
+                          <h5 class="card-title">BENT PYRAMID</h5>
+                          <p class="card-text">Its angle changes mid-build, from 54° to 43° — physical evidence of Egypt's engineers correcting a structural mistake in real time.</p>
+
+                          <button>Open details</button>
+                        </div>
+                </div>
+
+                <div class="g-col-4 card" style="width: 20rem;">
+                        <img src="pyramids-imgs/red-pyramid.jpg" class="card-img-top" alt="">
+
+                        <div class="card-body">
+                          <span>DAHSHUR • C. 2590 BCE</span>
+                          <h5 class="card-title">RED PYRAMID</h5>
+                          <p class="card-text">Named for the rust-tond limestone beneath its casing, this is the first successful true (smooth-sided) pyramid ever completed.</p>
+
+                          <button>Open details</button>
+                        </div>
+                </div>
+
+                <div class="g-col-4 card" style="width: 20rem;">
+                            <img src="https://i.pinimg.com/1200x/cb/7a/bc/cb7abcf17b48cf6468f8f89ba05edd07.jpg" class="card-img-top" alt="">
+
+                            <div class="card-body">
+                                <span>GIZA • C. 2560 BCE</span>
+                                <h5 class="card-title">GREAT PYRAMID OF GIZA</h5>
+                                <p class="card-text">
+                                The largest of the three pyramids at Giza, built for Pharaoh Khufu and once the tallest human-made structure in the world.</p>
+                                <button>Open details</button>
+                            </div>
+                </div>
+
+                <div class="g-col-4 card" style="width: 20rem;">
+                            <img src="https://i.pinimg.com/1200x/20/6a/12/206a12b7c410355ed3b67f2c39ab323e.jpg" class="card-img-top" alt="">
+
+                        <div class="card-body">
+                            <span>SAQQARA • C. 2670 BCE</span>
+                            <h5 class="card-title">STEP PYRAMID OF DJOSER</h5>
+                            <p class="card-text">
+                            The Step Pyramid of Djoser is one of Egypt's earliest monumental stone structures, built for Pharaoh Djoser and designed by the famous architect Imhotep.
+                            </p>
+
+                            <button>Open details</button>
+                        </div>
+                </div>
+             
+            </div>
+       </section>
+
+       
+    <section class="sphinx-section">
+
+          <h2>The Sphinx</h2>
+
+      <div class="cards-grid">
+
+           <div class="g-col-4 card" style="width: 20rem;">
+               <img src="https://i.pinimg.com/736x/17/0d/6e/170d6e9f20bf4a9c167f681a21b6da36.jpg" class="card-img-top" alt="Great Sphinx of Giza">
+
+               <div class="card-body">
+                   <span>GIZA • C. 2500 BCE</span>
+                   <h5 class="card-title">GREAT SPHINX OF GIZA</h5>
+                  <p class="card-text">
+                     The Great Sphinx is a colossal limestone statue with the body of a lion and the head of a pharaoh, believed to represent Pharaoh Khafre.
+                  </p>
+
+                  <button>Open details</button>
+              </div>
+         </div>
+
+
+           <div class="g-col-4 card" style="width: 20rem;">
+               <img src="SPHINX FACE.png" class="card-img-top" alt="Face of the Great Sphinx">
+
+               <div class="card-body">
+                  <span>GIZA • C. 2500 BCE</span>
+                   <h5 class="card-title">THE SPHINX FACE</h5>
+                   <p class="card-text">
+                    The human face of the Sphinx is carved with royal features, including the traditional nemes headdress worn by ancient Egyptian pharaohs.
+                   </p>
+
+                  <button>Open details</button>
+                </div>
+          </div>
+
+
+           <div class="g-col-4 card" style="width: 20rem;">
+               <img src="THE SPHINX PAWS.png" class="card-img-top" alt="Paws of the Great Sphinx">
+
+               <div class="card-body">
+                  <span>GIZA • ANCIENT KINGDOM</span>
+                  <h5 class="card-title">THE SPHINX PAWS</h5>
+                  <p class="card-text">
+                    The enormous paws extend forward from the lion's body and show the remarkable scale of the monument carved directly from the bedrock.
+                 </p>
+ 
+                  <button>Open details</button>
+               </div>
+           </div>
+
+
+            <div class="g-col-4 card" style="width: 20rem;">
+                <img src="https://i.pinimg.com/736x/47/96/d9/4796d978ab2205e36b524c45e40fe443.jpg" class="card-img-top" alt="Dream Stela of the Sphinx">
+
+              <div class="card-body">
+                  <span>GIZA • C. 1401 BCE</span>
+                  <h5 class="card-title">DREAM STELA</h5>
+                 <p class="card-text">
+                    The Dream Stela stands between the Sphinx's paws and tells the story of Prince Thutmose, who later became Pharaoh Thutmose IV.
+                 </p>
+
+                 <button>Open details</button>
+               </div>
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- Hieroglyphics Section -->
+<section class="hieroglyphics-section">
+
+    <h2>Hieroglyphics</h2>
+
+    <div class="cards-grid">
+
+        <div class="g-col-4 card" style="width: 20rem;">
+            <img src="https://i.pinimg.com/736x/10/17/c7/1017c7fa5868087869f33e1684feba87.jpg" class="card-img-top" alt="Religious Egyptian Hieroglyphics">
+
+            <div class="card-body">
+                <span>ANCIENT EGYPT • C. 3200 BCE</span>
+                <h5 class="card-title">RELIGIOUS HIEROGLYPHICS</h5>
+                <p class="card-text">
+                    Religious hieroglyphics were used in temples and tombs to record prayers, sacred beliefs, and stories about the Egyptian gods.
+                </p>
+
+                <button>Open details</button>
+            </div>
+        </div>
+
+
+        <div class="g-col-4 card" style="width: 20rem;">
+            <img src="https://i.pinimg.com/1200x/81/3d/a1/813da13c094f06e26b962004b07e6724.jpg" class="card-img-top" alt="Funerary Egyptian Hieroglyphics">
+
+            <div class="card-body">
+                <span>ANCIENT EGYPT • C. 1550 BCE</span>
+                <h5 class="card-title">FUNERARY HIEROGLYPHICS</h5>
+                <p class="card-text">
+                    Funerary hieroglyphics appeared on coffins, tomb walls, and sacred texts to guide the dead safely into the afterlife.
+                </p>
+
+                <button>Open details</button>
+            </div>
+        </div>
+
+
+        <div class="g-col-4 card" style="width: 20rem;">
+            <img src="https://i.pinimg.com/736x/32/eb/a3/32eba3e362d22a146306ed1b05b9657b.jpg" class="card-img-top" alt="Royal Egyptian Hieroglyphics">
+
+            <div class="card-body">
+                <span>ANCIENT EGYPT • NEW KINGDOM</span>
+                <h5 class="card-title">ROYAL HIEROGLYPHICS</h5>
+                <p class="card-text">
+                    Royal hieroglyphics recorded the names, titles, victories, and achievements of Egyptian pharaohs on monuments and temple walls.
+                </p>
+
+                <button>Open details</button>
+            </div>
+        </div>
+
+
+        <div class="g-col-4 card" style="width: 20rem;">
+            <img src="https://i.pinimg.com/1200x/44/91/67/4491671ac197995ae86264a7842f921c.jpg" class="card-img-top" alt="Everyday Egyptian Hieroglyphics">
+
+            <div class="card-body">
+                <span>ANCIENT EGYPT • DAILY LIFE</span>
+                <h5 class="card-title">EVERYDAY HIEROGLYPHICS</h5>
+                <p class="card-text">
+                    Hieroglyphic symbols were also used to record names, objects, places, occupations, and important events from everyday Egyptian life.
+                </p>
+
+                <button>Open details</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Ancient Artifacts Section -->
+<section class="artifacts-section">
+
+    <h2>Ancient Artifacts</h2>
+
+    <div class="cards-grid">
+
+        <div class="g-col-4 card" style="width: 20rem;">
+            <img src="https://i.pinimg.com/1200x/4c/f7/1a/4cf71a7493f8cc3f63c62bceeee157c8.jpg" class="card-img-top" alt="Ancient Egyptian Statues">
+
+            <div class="card-body">
+                <span>ANCIENT EGYPT • C. 3000 BCE</span>
+                <h5 class="card-title">STATUES & SCULPTURES</h5>
+                <p class="card-text">
+                    Egyptian statues represented pharaohs, gods, and important people, often created to preserve their presence for eternity.
+                </p>
+
+                <button>Open details</button>
+            </div>
+        </div>
+
+
+        <div class="g-col-4 card" style="width: 20rem;">
+            <img src="JEWELRY.png" class="card-img-top" alt="Ancient Egyptian Jewelry and Amulets">
+
+            <div class="card-body">
+                <span>ANCIENT EGYPT • C. 2000 BCE</span>
+                <h5 class="card-title">JEWELRY & AMULETS</h5>
+                <p class="card-text">
+                    Jewelry and amulets were worn for beauty, status, and protection, with many symbols believed to provide magical powers.
+                </p>
+
+                <button>Open details</button>
+            </div>
+        </div>
+
+
+        <div class="g-col-4 card" style="width: 20rem;">
+            <img src="https://i.pinimg.com/736x/dd/41/d3/dd41d3419d7d77b603ce14956ae09f2a.jpg" class="card-img-top" alt="Ancient Egyptian Canopic Jars">
+
+            <div class="card-body">
+                <span>ANCIENT EGYPT • C. 2000 BCE</span>
+                <h5 class="card-title">CANOPIC JARS</h5>
+                <p class="card-text">
+                    Canopic jars were used during mummification to store and protect the internal organs of the deceased for the afterlife.
+                </p>
+
+                <button>Open details</button>
+            </div>
+        </div>
+
+
+        <div class="g-col-4 card" style="width: 20rem;">
+            <img src="https://i.pinimg.com/736x/28/8d/55/288d55a75c9e12245e6c2628e3db4cd0.jpg" class="card-img-top" alt="Ancient Egyptian Funerary Mask">
+
+            <div class="card-body">
+                <span>ANCIENT EGYPT • C. 1323 BCE</span>
+                <h5 class="card-title">FUNERARY MASKS</h5>
+                <p class="card-text">
+                    Funerary masks were placed over mummies to protect the deceased and help identify them in the journey to the afterlife.
+                </p>
+
+                <button>Open details</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+        
+    </main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>
