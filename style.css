@@ -1248,16 +1248,25 @@ footer .col-lg-2 a:hover {
 
 .newsletter button {
     width: 35%;
+    margin-left: 12px;
 
-    border: none;
+    border: 1px solid #d4af37;
+    background: #d4af37;
+    color: #21140a;
 
-    background: var(--gold);
-
-    font-size: 9px;
-
+    font-size: 12px;
     font-weight: bold;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.newsletter button:hover {
+    background: transparent;
+    color: #d4af37;
+    border-color: #d4af37;
+}
 
 /* FOOTER BOTTOM */
 
@@ -1288,4 +1297,5 @@ footer .col-lg-2 a:hover {
     font-size: 9px;
     margin: 0;
 }
+
 
