@@ -29,7 +29,7 @@
 
 body.about-page {
     background: var(--about-cream);
-    color: var(--about-text);
+    color: white;
 
     font-family: "Poppins", sans-serif;
 }
@@ -92,7 +92,7 @@ body.about-page nav a:hover {
     position: relative;
 
     width: 100%;
-    min-height: 600px;
+    min-height: 700px;
 
     display: flex;
     align-items: center;
@@ -847,7 +847,7 @@ body.about-page nav a:hover {
 @media (max-width: 992px) {
 
     .about-hero {
-        min-height: 550px;
+        height: 550px;
     }
 
 
@@ -879,7 +879,7 @@ body.about-page nav a:hover {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
 
     .about-hero {
         min-height: 500px;
@@ -977,3 +977,7 @@ body.about-page nav a:hover {
     }
 
 }
+
+
+
+
