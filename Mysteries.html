@@ -2,81 +2,829 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mysteries of Ancient Egypt</title>
+    <title>THE MYSTERIES AND CONSTRUCTION</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mysteries.css">
+
+    <style>
+
+        #website {
+            width: 100%;
+        }
+
+        .main-mysteries {
+            background-color: #fef1d1;
+            padding-bottom: 50px;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 85px;
+            z-index: 20;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5%;
+
+            background: rgba(8, 6, 3, 0.85);
+            border-bottom: 1px solid #7a5c2e;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-eye img {
+            width: 70px;
+            height: auto;
+        }
+
+        .logo h2 {
+            font-family: "Cinzel", serif;
+            font-size: 17px;
+            letter-spacing: 2px;
+            margin: 0 0 2px;
+            color: #e5d3a5;
+        }
+
+        .logo small {
+            color: #8e8066;
+            letter-spacing: 2px;
+            font-size: 8px;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: "Cinzel", serif;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+            border-bottom: 1px solid #d4af37;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 85px);
+            min-height: 600px;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+
+            margin-bottom: 0;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            width: 650px;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+
+        .subtitle {
+            display: block;
+
+            color: #d4af37;
+            font-size: 14px;
+            letter-spacing: 8px;
+
+            margin-bottom: 25px;
+        }
+
+       .hero-content h1 {
+            margin: 0;
+
+            color: rgb(253, 241, 221);
+
+            font-family: 'Chizel', serif;
+
+            font-size: 82px;
+
+           font-weight: 400;
+    
+           line-height: 0.95;
+
+           letter-spacing: 2px;
+}
+
+         .hero-content h1 span {
+              display: block;
+
+             color: #d4af37;
+}
+
+        .description {
+            max-width: 550px;
+
+            color: #e8d8b0;
+            font-family: "Poppins", sans-serif;
+
+            font-size: 15px;
+            line-height: 1.8;
+
+            margin-top: 25px;
+        }
+
+        .construction-theories {
+            padding: 90px 6%;
+            background: #eee3c4;
+        }
+
+        .construction-theories > span {
+            display: block;
+
+            color: #b08036;
+            font-size: 12px;
+            letter-spacing: 6px;
+
+            margin-bottom: 15px;
+        }
+
+        .construction-theories > h2 {
+            font-family: "Cinzel", serif;
+            font-size: 48px;
+            font-weight: 500;
+
+            color: #2b2118;
+
+            margin-bottom: 60px;
+        }
+
+        .theories-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .theory-card {
+            background: #eee3c4;
+            border: 1px solid #d5bd86;
+            overflow: hidden;
+        }
+
+        .theory-image {
+            width: 100%;
+            height: 255px;
+
+            background: #182d32;
+            overflow: hidden;
+        }
+
+        .theory-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            display: block;
+        }
+
+        .theory-content {
+            padding: 30px;
+        }
+
+        .theory-content span {
+            display: block;
+
+            color: #b08036;
+            font-size: 11px;
+            letter-spacing: 5px;
+
+            margin-bottom: 12px;
+        }
+
+        .theory-content h3 {
+            font-family: "Cinzel", serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 1.3;
+
+            color: #2b2118;
+
+            margin-bottom: 18px;
+        }
+
+        .theory-content p {
+            font-family: "Poppins", sans-serif;
+
+            font-size: 14px;
+            line-height: 1.9;
+
+            color: #493b2c;
+        }
+
+        .open-questions {
+            padding: 90px 6%;
+            background: #eee3c4;
+        }
+
+        .open-questions  span {
+            display: block;
+
+            color: #b08036;
+            font-size: 12px;
+            letter-spacing: 6px;
+
+            margin-bottom: 15px;
+        }
+
+        .open-questions  h2 {
+            font-family: "Cinzel", serif;
+            font-size: 48px;
+            font-weight: 500;
+
+            color: #2b2118;
+
+            margin-bottom: 60px;
+        }
+
+        .questions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .questions-container details {
+            border: 1px solid #d2b978;
+            background: #eee3c4;
+        }
+
+        .questions-container summary {
+            list-style: none;
+
+            cursor: pointer;
+
+            padding: 25px 60px 25px 28px;
+
+            font-family: "Cinzel", serif;
+            font-size: 21px;
+
+            color: #211a13;
+
+            position: relative;
+        }
+
+        .questions-container summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .questions-container summary::after {
+            content: "v";
+
+            position: absolute;
+
+            right: 28px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            font-size: 25px;
+        }
+
+        .questions-container details[open] summary {
+            background: #171717;
+            color: #c59643;
+        }
+
+        .questions-container details[open] summary::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .questions-container details p {
+            margin: 0;
+
+            padding: 25px 28px 30px;
+
+            background: #eee3c4;
+
+            color: #3e3226;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-     <main id="website">
+    <header>
 
-        <header id="home">
+        <div class="logo">
 
-            <div class="logo">
-
-                <div class="logo-eye">
-                    <img src="logo.svg" alt="">
-                </div>
-
-                <div>
-                    <h2>ANCIENT EGYPT</h2>
-                    <small>
-                        LEGACY • HISTORY • MYSTERY
-                    </small>
-                </div>
-
+            <div class="logo-eye">
+                <img src="logo.svg" alt="Ancient Egypt logo">
             </div>
 
+            <div>
+                <h2>ANCIENT EGYPT</h2>
 
-            <nav>
-
-                <a href="#home">Home</a>
-                <a href="pyramids.html">Pyramids</a>
-                <a href="pharaohs.html">Pharaohs</a>
-                <a href="mysteries.html">Mysteries</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="timeline.html">Timeline</a>
-                <a href="about.html">about</a>
-
-
-            </nav>
-
-        </header>
-        
-          <main class="main-mysteries">
-         <section class="hero">
-            <img src="Mysteries." alt="" class="background-image">
-
-            <div class="overlay"></div>
-
-            <div class="hero-content">
-                <span class="subtitle">SIX STRUCTURE, SIX CENTURIES</span>
-
-                <h1>>THE MYSTERIES OF ANICENT EGYPT</h1>
-
-                <p class="description">From Djoser,s experimental steps to the smooth, star-aligned faces of Giza — the evolution of the pyramid form. told through six monuments.</p>
+                <small>
+                    LEGACY • HISTORY • MYSTERY
+                </small>
             </div>
-         </section>
+
+        </div>
 
 
+        <nav>
 
-    
+            <a href="index.html">Home</a>
+            <a href="pyramids.html">Pyramids</a>
+            <a href="pharaohs.html">Pharaohs</a>
+            <a href="mysteries.html">Mysteries</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="about.html">About</a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="mysteries">
+
+        <div class="main-mysteries">
+
+
+            <section class="hero">
+
+                <img
+                    src="https://i.pinimg.com/736x/ec/1b/e2/ec1be2d0bcaeec01cd2658377f7940d5.jpg"
+                    alt="Ancient Egyptian pyramids"
+                    class="background-image">
+
+                <div class="overlay">
+
+                <div class="hero-content">
+
+                    <span class="subtitle">
+                        SIX STRUCTURES, SIX CENTURIES
+                    </span>
+
+                    <h1>
+                        MYSTERIES AND CONSTRUCTION
+                    </h1>
+
+                    <p class="description">
+                        From Djoser's experimental steps to the smooth,
+                        star-aligned faces of Giza — the evolution of the
+                        pyramid form, told through six monuments.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="construction-theories">
+
+                <span>
+                    CONSTRUCTION THEORIES
+                </span>
+
+                <h2>
+                    HOW WERE THE PYRAMIDS BUILT?
+                </h2>
+
+
+                <div class="theories-container">
+
+
+                    <div class="theory-card">
+
+                        <div class="theory-image">
+
+                            <img
+                                src="https://i.pinimg.com/736x/c0/9e/1f/c09e1ffbe0f1c2bc38af7a15719bd604.jpg"
+                                alt="Stone transportation">
+
+                        </div>
+
+                        <div class="theory-content">
+
+                            <span>
+                                TRANSPORT
+                            </span>
+
+                            <h3>
+                                STONE TRANSPORTATION
+                            </h3>
+
+                            <p>
+                                Limestone blocks came from nearby quarries;
+                                granite traveled hundreds of kilometers by
+                                barge from Aswan during the Nile's annual flood.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="theory-card">
+
+                        <div class="theory-image">
+
+                            <img
+                                src="https://i.pinimg.com/1200x/4e/b0/1b/4eb01ba2833f28b783d6289193f058a0.jpg"
+                                alt="Ramps and levers">
+
+                        </div>
+
+                        <div class="theory-content">
+
+                            <span>
+                                METHOD
+                            </span>
+
+                            <h3>
+                                RAMPS & LEVERS
+                            </h3>
+
+                            <p>
+                                Straight, spiral, and zig-zag ramp designs
+                                have all been proposed. Wooden sledges
+                                dragged over wetted sand helped reduce friction.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="theory-card">
+
+                        <div class="theory-image">
+
+                            <img
+                                src="https://i.pinimg.com/736x/de/ed/33/deed3327dd9497dc105668487c88dee6.jpg"
+                                alt="Ancient Egyptian workers">
+
+                        </div>
+
+                        <div class="theory-content">
+
+                            <span>
+                                LABOR
+                            </span>
+
+                            <h3>
+                                THE WORKERS
+                            </h3>
+
+                            <p>
+                                Evidence from ancient Egypt describes
+                                organized, skilled crews of workers who
+                                were fed and housed near the construction sites.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="theory-card">
+
+                        <div class="theory-image">
+
+                            <img
+                                src="https://i.pinimg.com/736x/c6/4e/47/c64e4703156944a8c147b3ca2c1d7e81.jpg"
+                                alt="Ancient Egyptian tools">
+
+                        </div>
+
+                        <div class="theory-content">
+
+                            <span>
+                                TOOLS
+                            </span>
+
+                            <h3>
+                                COPPER & STONE TOOLS
+                            </h3>
+
+                            <p>
+                                Without iron, workers used copper chisels,
+                                dolerite pounding stones, wooden levers,
+                                ropes, and other simple tools.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="open-questions">
+
+                <span>
+                    OPEN QUESTIONS
+                </span>
+
+                <h2>
+                    THE MYSTERIES THAT REMAIN
+                </h2>
+
+
+                <div class="questions-container">
+
+
+                    <details>
+
+                        <summary>
+                            HOW WERE THEY ALIGNED SO PRECISELY?
+                        </summary>
+
+                        <p>
+                            The pyramids were carefully aligned with the
+                            cardinal directions, using observations of
+                            the sun and stars.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            WHY WERE THEY BUILT AT ALL?
+                        </summary>
+
+                        <p>
+                            Pyramids served as royal tombs and were
+                            connected to ancient Egyptian beliefs about
+                            resurrection and the journey of the king's
+                            spirit into the afterlife.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            WHAT WAS ORIGINALLY INSIDE THEM?
+                        </summary>
+
+                        <p>
+                            Many pyramids contained burial chambers,
+                            passages, sarcophagi, and objects connected
+                            to the king's journey into the afterlife.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            HOW HAVE THEY SURVIVED SO LONG?
+                        </summary>
+
+                        <p>
+                            Their massive stone construction, carefully
+                            chosen locations, and relatively dry Egyptian
+                            climate helped preserve them for thousands of years.
+                        </p>
+
+                    </details>
+
+
+                    <details>
+
+                        <summary>
+                            ARE THERE HIDDEN CHAMBERS LEFT TO FIND?
+                        </summary>
+
+                        <p>
+                            Modern scanning technologies have revealed
+                            previously unknown spaces inside some pyramids,
+                            suggesting that more discoveries may still be possible.
+                        </p>
+
+                    </details>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+
+                <div class="container">
+
+                    <div class="row gy-5">
+
+
+                        <div class="col-lg-4">
+
+                            <div class="footer-brand">
+
+                                <div class="logo-eye">
+
+                                    <img
+                                        src="logo.svg"
+                                        alt="Ancient Egypt logo">
+
+                                </div>
+
+                                <div>
+
+                                    <h3>
+                                        ANCIENT EGYPT
+                                    </h3>
+
+                                    <small>
+                                        LEGACY • HISTORY • MYSTERY
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <p>
+                                Discover the civilization, monuments
+                                and mysteries that survived thousands
+                                of years.
+                            </p>
+
+
+                            <div class="socials">
+
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-lg-2">
+
+                            <h4>
+                                QUICK LINKS
+                            </h4>
+
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About Egypt</a>
+                            <a href="pyramids.html">Pyramids</a>
+                            <a href="pharaohs.html">Pharaohs</a>
+                            <a href="gallery.html">Gallery</a>
+
+                        </div>
+
+
+                        <div class="col-lg-2">
+
+                            <h4>
+                                EXPLORE
+                            </h4>
+
+                            <a href="mysteries.html">Mysteries</a>
+                            <a href="ancient.html">Ancient Life</a>
+                            <a href="religion.html">Religion</a>
+                            <a href="artifacts.html">Artifacts</a>
+                            <a href="maps.html">Maps</a>
+
+                        </div>
+
+
+                        <div class="col-lg-4">
+
+                            <h4>
+                                NEWSLETTER
+                            </h4>
+
+                            <p>
+                                Subscribe to get updates about ancient
+                                discoveries and new stories.
+                            </p>
+
+                            <div class="newsletter">
+
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email">
+
+                                <button>
+                                    SUBSCRIBE
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-bottom">
+
+                    <span class="eye">
+                        𓂀 𓁹 𓆣 𓃀 𓋹
+                    </span>
+
+                    <p class="eye">
+                        © 2026 Mysteries of Ancient Egypt.
+                        All Rights Reserved.
+                    </p>
+
+                    <span class="eye">
+                        𓋹 𓃀 𓆣 𓁹 𓂀
+                    </span>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+
+   
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
