@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>timeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mysteries.css">
+    <style>
+        /* =========================================
+   TIMELINE HERO
+========================================= */
+
+        .timeline-hero {
+            min-height: 650px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .timeline-bg {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .timeline-overlay {
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(rgba(20, 10, 3, 0.45),
+                    rgba(20, 10, 3, 0.80));
+        }
+
+        .timeline-hero-content {
+            position: relative;
+            z-index: 2;
+
+            max-width: 850px;
+            padding: 40px;
+        }
+
+        .timeline-hero-content .subtitle {
+            color: #d4af37;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 14px;
+            letter-spacing: 6px;
+        }
+
+        .timeline-hero-content h1 {
+            color: #fff8eb;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 70px;
+            line-height: 1.05;
+
+            margin: 20px 0;
+        }
+
+        .timeline-hero-content p {
+            color: #f7ead4;
+
+            max-width: 650px;
+            margin: auto;
+
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+   INTRO
+========================================= */
+
+        .timeline-intro {
+            padding: 90px 15%;
+
+            text-align: center;
+
+            background: #fff2d2;
+        }
+
+        .timeline-intro span {
+            color: #b77d18;
+
+            font-family: "Cinzel", serif;
+
+            letter-spacing: 5px;
+            font-size: 13px;
+        }
+
+        .timeline-intro h2 {
+            color: #32180d;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 38px;
+
+            margin: 15px 0 20px;
+        }
+
+        .timeline-intro p {
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #4b3929;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+   TIMELINE
+========================================= */
+
+        .egypt-timeline {
+            position: relative;
+
+            padding: 80px 8%;
+
+            background:
+                linear-gradient(rgba(255, 242, 210, 0.94),
+                    rgba(255, 242, 210, 0.94)),
+                url("images/papyrus.jpg");
+
+            background-size: cover;
+        }
+
+
+        /* CENTER LINE */
+
+        .timeline-line {
+            position: absolute;
+
+            top: 80px;
+            bottom: 80px;
+
+            left: 50%;
+
+            width: 2px;
+
+            background: #d4af37;
+
+            transform: translateX(-50%);
+        }
+
+
+        /* =========================================
+   TIMELINE ITEM
+========================================= */
+
+        .timeline-item {
+            position: relative;
+
+            width: 50%;
+
+            margin-bottom: 80px;
+        }
+
+        .timeline-item.left {
+            padding-right: 70px;
+
+            text-align: right;
+        }
+
+        .timeline-item.right {
+            margin-left: 50%;
+
+            padding-left: 70px;
+
+            text-align: left;
+        }
+
+
+        /* DATE */
+
+        .timeline-date {
+            color: #b77d18;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 13px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================
+   CARD
+========================================= */
+
+        .timeline-card {
+            background: #fff9ea;
+
+            border: 1px solid #d4af37;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 20px rgba(80, 45, 10, 0.12);
+
+            transition: 0.35s ease;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 30px rgba(80, 45, 10, 0.22);
+        }
+
+
+        /* IMAGE */
+
+        .timeline-image {
+            width: 100%;
+
+            height: 700px;
+
+            overflow: hidden;
+        }
+
+        .timeline-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s ease;
+        }
+
+        .timeline-card:hover .timeline-image img {
+            transform: scale(1.06);
+        }
+
+
+        /* CONTENT */
+
+        .timeline-content {
+            padding: 28px;
+        }
+
+        .timeline-content span {
+            color: #b77d18;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+        }
+
+        .timeline-content h3 {
+            color: #32180d;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 23px;
+
+            margin: 10px 0 12px;
+        }
+
+        .timeline-content p {
+            color: #4b3929;
+
+            line-height: 1.7;
+
+            margin: 0;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+   GOLD DOTS ON CENTER LINE
+========================================= */
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            top: 45px;
+
+            width: 18px;
+            height: 18px;
+
+            background: #d4af37;
+
+            border: 4px solid #fff2d2;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 0 2px #d4af37;
+
+            z-index: 5;
+        }
+
+        .timeline-item.left::before {
+            right: -9px;
+        }
+
+        .timeline-item.right::before {
+            left: -9px;
+        }
+
+
+        /* =========================================
+   END SECTION
+========================================= */
+
+        .timeline-end {
+            padding: 90px 15%;
+
+            text-align: center;
+
+            background: #32180d;
+        }
+
+        .timeline-end>span {
+            color: #d4af37;
+
+            font-size: 50px;
+        }
+
+        .timeline-end h2 {
+            color: #fff8eb;
+
+            font-family: "Cinzel", serif;
+
+            font-size: 38px;
+
+            margin: 15px 0;
+        }
+
+        .timeline-end p {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #e8d7bd;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+   RESPONSIVE
+========================================= */
+
+        @media (max-width: 768px) {
+
+            .timeline-hero-content h1 {
+                font-size: 45px;
+            }
+
+            .timeline-intro {
+                padding: 70px 8%;
+            }
+
+            .timeline-line {
+                left: 25px;
+            }
+
+            .timeline-item,
+            .timeline-item.right {
+                width: 100%;
+
+                margin-left: 0;
+
+                padding-left: 60px;
+                padding-right: 0;
+
+                text-align: left;
+            }
+
+            .timeline-item.left::before,
+            .timeline-item.right::before {
+                left: 16px;
+                right: auto;
+            }
+
+            .timeline-card {
+                width: 100%;
+            }
+
+            .timeline-end {
+                padding: 70px 8%;
+            }
+
+            .timeline-end h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-eye">
+                <img src="logo.svg" alt="Ancient Egypt logo">
+            </div>
+
+            <div>
+                <h2>ANCIENT EGYPT</h2>
+
+                <small>
+                    LEGACY • HISTORY • MYSTERY
+                </small>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="pyramids.html">Pyramids</a>
+            <a href="pharaohs.html">Pharaohs</a>
+            <a href="mysterie.html">Mysteries</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="about.html">About</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= TIMELINE PAGE ================= -->
+
+    <section class="timeline-hero">
+
+        <img src="images/timeline hero.jpg" alt="Ancient Egypt Timeline"
+            class="timeline-bg">
+
+        <div class="timeline-overlay"></div>
+
+        <div class="timeline-hero-content">
+
+            <span class="subtitle">
+                THROUGH THE AGES
+            </span>
+
+            <h1>
+                TIMELINE OF<br>
+                ANCIENT EGYPT
+            </h1>
+
+            <p>
+                Journey through thousands of years of pharaohs,
+                monuments, kingdoms, and remarkable civilization.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+
+    <section class="timeline-intro">
+
+        <span>THE JOURNEY BEGINS</span>
+
+        <h2>
+            A CIVILIZATION THROUGH TIME
+        </h2>
+
+        <p>
+            Ancient Egypt developed along the Nile River and became
+            one of the world's most remarkable civilizations.
+            Explore the major periods that shaped Egyptian history.
+        </p>
+
+    </section>
+
+
+    <!-- ================= TIMELINE ================= -->
+
+    <section class="egypt-timeline">
+
+        <div class="timeline-line"></div>
+
+
+        <!-- PREHISTORIC EGYPT -->
+
+        <div class="timeline-item left">
+
+            <div class="timeline-date">
+                c. 6000–3100 BCE
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-image">
+                    <img src="images/PREHISTORIC EGYPT.jpg"
+                        alt="Early Egypt">
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>BEGINNING</span>
+
+                    <h3>
+                        PREHISTORIC EGYPT
+                    </h3>
+
+                    <p>
+                        Early communities settled along the Nile,
+                        developing agriculture, villages, trade,
+                        and early forms of Egyptian culture.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- EARLY DYNASTIC -->
+
+        <div class="timeline-item right">
+
+            <div class="timeline-date">
+                c. 3100–2686 BCE
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-image">
+                    <img src="images/EARLY DYNASTIC PERIOD.jpg"
+                        alt="Early Dynastic Egypt">
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>UNIFICATION</span>
+
+                    <h3>
+                        EARLY DYNASTIC PERIOD
+                    </h3>
+
+                    <p>
+                        Upper and Lower Egypt were united under a single
+                        ruler. The foundations of the Egyptian state
+                        and royal traditions were established.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OLD KINGDOM -->
+
+        <div class="timeline-item left">
+
+            <div class="timeline-date">
+                c. 2686–2181 BCE
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-image">
+                    <img src="images/Old Kingdom of Egypt.jpg"
+                        alt="Pyramids of Egypt">
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>AGE OF PYRAMIDS</span>
+
+                    <h3>
+                        OLD KINGDOM
+                    </h3>
+
+                    <p>
+                        Known as the Age of the Pyramids, this period
+                        saw the construction of monumental structures
+                        including the Step Pyramid and the pyramids of Giza.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MIDDLE KINGDOM -->
+
+        <div class="timeline-item right">
+
+            <div class="timeline-date">
+                c. 2055–1650 BCE
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-image">
+                    <img src="images/MIDDLE KINGDOM.jpg"
+                        alt="Middle Kingdom Egypt">
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>REUNIFICATION</span>
+
+                    <h3>
+                        MIDDLE KINGDOM
+                    </h3>
+
+                    <p>
+                        Egypt was reunified after a period of division.
+                        Art, literature, architecture, and trade flourished
+                        during this important era.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NEW KINGDOM -->
+
+        <div class="timeline-item left">
+
+            <div class="timeline-date">
+                c. 1550–1070 BCE
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-image">
+                    <img src="images/NEW KINGDOM.jpg"
+                        alt="New Kingdom Egypt">
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>GOLDEN AGE</span>
+
+                    <h3>
+                        NEW KINGDOM
+                    </h3>
+
+                    <p>
+                        Egypt reached the height of its power.
+                        Great rulers, temples, monuments, and royal tombs
+                        transformed the civilization.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LATE PERIOD -->
+
+        <div class="timeline-item right">
+
+            <div class="timeline-date">
+                c. 664–332 BCE
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-image">
+                    <img src="images/LAST NATIVE.jpg"
+                        alt="Late Period Egypt">
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>LAST NATIVE DYNASTIES</span>
+
+                    <h3>
+                        LATE PERIOD
+                    </h3>
+
+                    <p>
+                        Egypt experienced periods of foreign rule while
+                        continuing to preserve its ancient traditions,
+                        religion, art, and culture.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PTOLEMAIC -->
+
+        <div class="timeline-item left">
+
+            <div class="timeline-date">
+                332–30 BCE
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-image">
+                    <img src="images/PTOLEMAIC PERIOD.jpg"
+                        alt="Ptolemaic Egypt">
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>GREEK INFLUENCE</span>
+
+                    <h3>
+                        PTOLEMAIC PERIOD
+                    </h3>
+
+                    <p>
+                        After Alexander the Great's conquest, Egypt was
+                        ruled by the Ptolemaic dynasty. Greek and Egyptian
+                        traditions existed side by side.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ROMAN -->
+
+        <div class="timeline-item right">
+
+            <div class="timeline-date">
+                30 BCE – 641 CE
+            </div>
+
+            <div class="timeline-card">
+
+                <div class="timeline-image">
+                    <img src="images/ROMAN RULE.jpg"
+                        alt="Roman Egypt">
+                </div>
+
+                <div class="timeline-content">
+
+                    <span>ROMAN RULE</span>
+
+                    <h3>
+                        ROMAN EGYPT
+                    </h3>
+
+                    <p>
+                        Egypt became part of the Roman Empire.
+                        Alexandria remained an important center of
+                        trade, learning, and culture.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ================= END SECTION ================= -->
+
+    <section class="timeline-end">
+
+
+        <h2>
+            THE LEGACY CONTINUES
+        </h2>
+
+        <p>
+            Thousands of years later, the monuments, stories,
+            discoveries and mysteries of Ancient Egypt continue
+            to inspire the world.
+        </p>
+    </section>
+    <footer>
+
+        <div class="container">
+
+            <div class="row gy-5">
+
+
+                <div class="col-lg-4">
+
+                    <div class="footer-brand">
+
+                        <div class="logo-eye">
+
+                            <img src="logo.svg" alt="Ancient Egypt logo">
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                ANCIENT EGYPT
+                            </h3>
+
+                            <small>
+                                LEGACY • HISTORY • MYSTERY
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Discover the civilization, monuments
+                        and mysteries that survived thousands
+                        of years.
+                    </p>
+
+
+                    <div class="socials">
+
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-2">
+
+                    <h4>
+                        QUICK LINKS
+                    </h4>
+
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Egypt</a>
+                    <a href="pyramids.html">Pyramids</a>
+                    <a href="pharaohs.html">Pharaohs</a>
+                    <a href="gallery.html">Gallery</a>
+
+                </div>
+
+
+                <div class="col-lg-2">
+
+                    <h4>
+                        EXPLORE
+                    </h4>
+
+                    <a href="mysterie.html">Mysteries</a>
+                    <a href="ancient.html">Ancient Life</a>
+                    <a href="religion.html">Religion</a>
+                    <a href="artifacts.html">Artifacts</a>
+                    <a href="maps.html">Maps</a>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <h4>
+                        NEWSLETTER
+                    </h4>
+
+                    <p>
+                        Subscribe to get updates about ancient
+                        discoveries and new stories.
+                    </p>
+
+                    <div class="newsletter">
+
+                        <input type="email" placeholder="Enter your email">
+
+                        <button>
+                            SUBSCRIBE
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span class="eye">
+                𓂀 𓁹 𓆣 𓃀 𓋹
+            </span>
+
+            <p class="eye">
+                © 2026 Mysteries of Ancient Egypt.
+                All Rights Reserved.
+            </p>
+
+            <span class="eye">
+                𓋹 𓃀 𓆣 𓁹 𓂀
+            </span>
+
+        </div>
+
+    </footer>
+
+    </div>
+
+    </main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>
